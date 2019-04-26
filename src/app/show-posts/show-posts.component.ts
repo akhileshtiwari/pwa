@@ -2,29 +2,27 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-show-posts',
+  templateUrl: './show-posts.component.html',
+  styleUrls: ['./show-posts.component.css']
 })
-export class AppComponent implements OnInit {
+export class ShowPostsComponent implements OnInit {
 
-  
-  title = 'app';
+  posts = null;
 
-  constructor(private http: HttpClient){
-
-  }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
-    this.http.get("http://localhost:3000/posts").subscribe(res =>{
-      console.log(res);
+    this.http.get("http://localhost:3000/posts").subscribe(res => {
+      this.posts = res;
+      console.log(this.posts);
     });
   }
 
-  requestNotification(){
+  requestNotification() {
     Notification.requestPermission().then(result => {
-      console.log("result:",result);
-      if(result === 'granted'){
+      console.log("result:", result);
+      if (result === 'granted') {
         this.randomNotification();
       }
     });
@@ -36,12 +34,13 @@ export class AppComponent implements OnInit {
     var notifBody = 'Created by Akhilesh';
     var notifImg = '/favicon.ico';
     var options = {
-        badge: notifImg,
-        body: notifBody,
-        icon: notifImg,
-        image: notifImg
+      badge: notifImg,
+      body: notifBody,
+      icon: notifImg,
+      image: notifImg
     }
     var notif = new Notification(notifTitle, options);
     setTimeout(this.randomNotification, 30000);
-}
+  }
+
 }
