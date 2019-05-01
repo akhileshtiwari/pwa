@@ -14,21 +14,6 @@
             "id": 3,
             "title": "AngularJS to Angular",
             "author": "Akhilesh"
-        },
-        {
-            "id": 4,
-            "title": "RxJS and Introduction",
-            "author": "Akhilesh"
-        },
-        {
-            "id": 5,
-            "title": "Getting Started with NgRX",
-            "author": "Akhilesh"
-        },
-        {
-            "id": 5,
-            "title": "Service Workers",
-            "author": "Akhilesh"
         }
     ],
     "comments": [
