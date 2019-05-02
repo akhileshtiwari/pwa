@@ -1,0 +1,26 @@
+{
+    "posts": [
+        {
+            "id": 1,
+            "title": "Awesome Angular",
+            "author": "Akhilesh"
+        },
+        {
+            "id": 2,
+            "title": "TypeScript - Getting Started",
+            "author": "Akhilesh"
+        },
+        {
+            "id": 3,
+            "title": "AngularJS to Angular",
+            "author": "Akhilesh"
+        }
+    ],
+    "comments": [
+        {
+            "id": 1,
+            "body": "some comment",
+            "postId": 1
+        }
+    ]
+}
