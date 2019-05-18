@@ -1,0 +1,10 @@
+.test-nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+}
+
+.test-nav a {
+    padding: 10px;
+    margin: 10px;
+}
