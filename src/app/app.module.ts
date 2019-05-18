@@ -7,6 +7,7 @@ import { environment } from '../environments/environment';
 import { HttpClientModule }    from '@angular/common/http';
 import { AppRoutingModule } from './/app-routing.module';
 import { ShowPostsComponent } from './show-posts/show-posts.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -15,10 +16,11 @@ import { ShowPostsComponent } from './show-posts/show-posts.component';
     ShowPostsComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     HttpClientModule,
     ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production }),
-    AppRoutingModule
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]

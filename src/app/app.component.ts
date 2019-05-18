@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { SwUpdate } from '@angular/service-worker';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +12,7 @@ export class AppComponent implements OnInit {
 
   title = 'app';
 
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private sw: SwUpdate) {
 
   }
 
